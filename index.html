@@ -291,6 +291,16 @@ details[open] summary.fq::after{transform:rotate(45deg)}
 
 /* AEO */
 
+/* PROUD (stars & stripes band) */
+#proud{position:relative;overflow:hidden;background:var(--ink);padding:78px 5%;text-align:center;border-top:1px solid rgba(242,101,34,0.12);border-bottom:1px solid rgba(242,101,34,0.12)}
+.proud-stripes{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent 40px,rgba(242,101,34,0.045) 40px,rgba(242,101,34,0.045) 44px)}
+.proud-inner{position:relative;z-index:2;max-width:920px;margin:0 auto}
+.proud-stars{font-size:24px;letter-spacing:8px;color:#FFC400;margin-bottom:20px;text-shadow:0 2px 14px rgba(255,196,0,0.35)}
+.proud-line{font-family:var(--fd);font-size:clamp(40px,6.4vw,72px);line-height:.95;letter-spacing:2px;color:var(--w);margin:0}
+.proud-line .gold{color:#FFC400}
+.proud-line .orange{color:var(--or)}
+.proud-rule{width:66px;height:4px;background:var(--or);border-radius:2px;margin:26px auto 0}
+
 /* CONTACT */
 #contact{background:var(--ash2)}
 .cog{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
@@ -646,6 +656,15 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
     </div>
   </div>
 </section>
+
+<div id="proud" aria-label="Proud of our stars and proud of our stripes">
+  <div class="proud-stripes" aria-hidden="true"></div>
+  <div class="proud-inner">
+    <div class="proud-stars" aria-hidden="true">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+    <p class="proud-line">Proud of our <span class="gold">stars</span>.<br/>Proud of our <span class="orange">stripes</span>.</p>
+    <div class="proud-rule"></div>
+  </div>
+</div>
 
 <section id="reviews">
   <div class="rev-head">
