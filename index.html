@@ -292,15 +292,15 @@ details[open] summary.fq::after{transform:rotate(45deg)}
 /* AEO */
 
 /* PROUD (stars & stripes band) */
-#proud{position:relative;overflow:hidden;background:var(--ink);padding:78px 5%;text-align:center;border-top:1px solid rgba(242,101,34,0.12);border-bottom:1px solid rgba(242,101,34,0.12)}
-.proud-stripes{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent 40px,rgba(242,101,34,0.045) 40px,rgba(242,101,34,0.045) 44px)}
+#proud{position:relative;overflow:hidden;background:var(--ink);padding:120px 5%;text-align:center;border-top:1px solid rgba(242,101,34,0.12);border-bottom:1px solid rgba(242,101,34,0.12)}
+.proud-flag-bg{position:absolute;inset:0;z-index:0}
+.proud-flag-bg svg{width:100%;height:100%;display:block}
+.proud-scrim{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 78% 96% at 50% 50%,rgba(27,32,36,0.46),rgba(27,32,36,0.82))}
 .proud-inner{position:relative;z-index:2;max-width:920px;margin:0 auto}
-.proud-flag{max-width:340px;margin:0 auto 30px}
-.proud-flag svg{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 32px rgba(0,0,0,.55))}
-.proud-line{font-family:var(--fd);font-size:clamp(40px,6.4vw,72px);line-height:.95;letter-spacing:2px;color:var(--w);margin:0}
+.proud-line{font-family:var(--fd);font-size:clamp(44px,7vw,82px);line-height:.95;letter-spacing:2px;color:var(--w);margin:0;text-shadow:0 3px 22px rgba(0,0,0,0.65)}
 .proud-line .gold{color:#FFC400}
 .proud-line .orange{color:var(--or)}
-.proud-rule{width:66px;height:4px;background:var(--or);border-radius:2px;margin:26px auto 0}
+.proud-rule{width:66px;height:4px;background:var(--or);border-radius:2px;margin:26px auto 0;box-shadow:0 0 16px rgba(242,101,34,0.55)}
 
 /* CONTACT */
 #contact{background:var(--ash2)}
@@ -659,52 +659,47 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
 </section>
 
 <div id="proud" aria-label="Proud of our stars and proud of our stripes">
-  <div class="proud-stripes" aria-hidden="true"></div>
+  <div class="proud-flag-bg" aria-hidden="true">
+    <svg viewBox="0 0 1000 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skyline Striping flag">
+      <defs>
+        <path id="ssstar" d="M0,-6.5 L1.53,-2.11 L6.18,-2.01 L2.47,0.81 L3.82,5.26 L0,2.6 L-3.82,5.26 L-2.47,0.81 L-6.18,-2.01 L-1.53,-2.11 Z" fill="#FFC400"/>
+        <pattern id="ssstars" width="63" height="33.5" patternUnits="userSpaceOnUse" patternTransform="translate(14,12)">
+          <use href="#ssstar" x="16" y="8.5"/>
+          <use href="#ssstar" x="47.5" y="25"/>
+        </pattern>
+        <linearGradient id="ssfold" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#000" stop-opacity="0.20"/><stop offset="0.12" stop-color="#000" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#fff" stop-opacity="0.05"/><stop offset="0.85" stop-color="#000" stop-opacity="0.10"/><stop offset="1" stop-color="#000" stop-opacity="0.24"/>
+        </linearGradient>
+        <filter id="sswave" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.015" numOctaves="2" seed="4" result="n">
+            <animate attributeName="baseFrequency" dur="5.6s" values="0.006 0.015;0.009 0.012;0.006 0.015" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+      <g filter="url(#sswave)">
+        <rect x="0" y="0"      width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="21.54"  width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="43.08"  width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="64.62"  width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="86.15"  width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="107.69" width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="129.23" width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="150.77" width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="172.31" width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="193.85" width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="215.38" width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="236.92" width="1000" height="21.6" fill="#F4F1EA"/>
+        <rect x="0" y="258.46" width="1000" height="21.6" fill="#F26522"/>
+        <rect x="0" y="0" width="380" height="150.77" fill="#1b2024"/>
+        <rect x="0" y="0" width="380" height="150.77" fill="url(#ssstars)"/>
+        <rect x="0" y="0" width="1000" height="280" fill="url(#ssfold)"/>
+      </g>
+    </svg>
+  </div>
+  <div class="proud-scrim" aria-hidden="true"></div>
   <div class="proud-inner">
-    <div class="proud-flag" aria-hidden="true">
-      <svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skyline Striping flag">
-        <defs>
-          <path id="ssstar" d="M0,-4.2 L0.99,-1.36 L3.99,-1.30 L1.59,0.52 L2.47,3.40 L0,1.68 L-2.47,3.40 L-1.59,0.52 L-3.99,-1.30 L-0.99,-1.36 Z" fill="#FFC400"/>
-          <pattern id="ssstars" width="44" height="24.4" patternUnits="userSpaceOnUse" patternTransform="translate(16,20)">
-            <use href="#ssstar" x="11" y="6"/>
-            <use href="#ssstar" x="33" y="18.2"/>
-          </pattern>
-          <linearGradient id="sspole" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#5a6068"/><stop offset="0.5" stop-color="#aeb4bb"/><stop offset="1" stop-color="#3b4046"/>
-          </linearGradient>
-          <linearGradient id="ssfold" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#000" stop-opacity="0.22"/><stop offset="0.12" stop-color="#000" stop-opacity="0"/>
-            <stop offset="0.5" stop-color="#fff" stop-opacity="0.06"/><stop offset="0.85" stop-color="#000" stop-opacity="0.12"/><stop offset="1" stop-color="#000" stop-opacity="0.28"/>
-          </linearGradient>
-          <filter id="sswave" x="-20%" y="-20%" width="140%" height="140%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.009 0.026" numOctaves="2" seed="4" result="n">
-              <animate attributeName="baseFrequency" dur="5.2s" values="0.009 0.026;0.013 0.020;0.009 0.026" repeatCount="indefinite"/>
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="n" scale="15" xChannelSelector="R" yChannelSelector="G"/>
-          </filter>
-        </defs>
-        <rect x="8" y="8" width="6" height="234" rx="3" fill="url(#sspole)"/>
-        <circle cx="11" cy="9" r="7" fill="#FFC400" stroke="#D4531A" stroke-width="0.6"/>
-        <g filter="url(#sswave)">
-          <rect x="16" y="18"    width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="33.7"  width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="49.4"  width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="65.1"  width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="80.8"  width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="96.5"  width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="112.2" width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="127.9" width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="143.6" width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="159.3" width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="175.0" width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="190.7" width="388" height="15.7" fill="#F4F1EA"/>
-          <rect x="16" y="206.4" width="388" height="15.7" fill="#F26522"/>
-          <rect x="16" y="18" width="155.2" height="109.9" fill="#1b2024"/>
-          <rect x="16" y="18" width="155.2" height="109.9" fill="url(#ssstars)"/>
-          <rect x="16" y="18" width="388" height="204" fill="url(#ssfold)"/>
-        </g>
-      </svg>
-    </div>
     <p class="proud-line">Proud of our <span class="gold">stars</span>.<br/>Proud of our <span class="orange">stripes</span>.</p>
     <div class="proud-rule"></div>
   </div>
