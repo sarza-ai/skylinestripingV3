@@ -282,6 +282,21 @@ h2.st{font-family:var(--fd);font-size:clamp(42px,5.5vw,70px);line-height:.93;let
 #glb-n{right:14px}
 
 /* FAQ */
+/* SERVICE AREA */
+#areas{background:var(--ash)}
+.areag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
+.areac{background:var(--ash3);border:1px solid var(--line);border-top:3px solid var(--or);padding:32px 28px;transition:background .25s,transform .25s}
+.areac:hover{background:var(--ash4);transform:translateY(-3px)}
+.areat{font-family:var(--fd);font-size:26px;letter-spacing:1.5px;color:var(--w);margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.areat svg{flex-shrink:0;opacity:.9}
+.aread{font-size:14px;line-height:1.72;color:var(--bo);margin-bottom:16px}
+.areal{font-size:12px;line-height:1.95;color:var(--mu);border-top:1px solid var(--line);padding-top:14px}
+.areal b{color:var(--bo);font-weight:600}
+.areanote{margin-top:34px;font-size:15px;line-height:1.7;color:var(--bo);max-width:760px}
+.areanote a{color:var(--orl);font-weight:600;text-decoration:none}
+.areanote a:hover{text-decoration:underline}
+@media(max-width:820px){.areag{grid-template-columns:1fr}}
+
 #faq{background:var(--ash2)}
 .fg{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;margin-top:50px;align-items:start}
 .fcb{background:var(--or);padding:36px}
@@ -483,6 +498,7 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
     <li><a href="#why">Why Us</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#areas">Areas</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#contact" class="nca">Free Quote</a></li>
@@ -497,6 +513,7 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
   <li><a href="#why" class="mob-link">Why Us</a></li>
   <li><a href="#reviews" class="mob-link">Reviews</a></li>
   <li><a href="#gallery" class="mob-link">Gallery</a></li>
+  <li><a href="#areas" class="mob-link">Areas</a></li>
   <li><a href="#faq" class="mob-link">FAQ</a></li>
   <li><a href="blog.html" class="mob-link">Blog</a></li>
   <li><a href="#contact" class="mob-link mob-cta">Free Quote</a></li>
@@ -523,11 +540,11 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
         <span class="hs0-tag">The cleanest, most durable lines. <em>Every line. Every time.</em></span>
       </p>
       <div class="ha">
-        <a href="tel:+18457978049" class="bp">
+        <a href="#contact" class="bp">Get My Free Quote &rarr;</a>
+        <a href="tel:+18457978049" class="bs">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           (845) 797.8049
         </a>
-        <a href="#contact" class="bs">Get My Free Quote &rarr;</a>
       </div>
       <div class="trust-row">
         <span class="trust-by">Trusted by</span>
@@ -807,6 +824,34 @@ footer{background:var(--ink);padding:60px 5% 28px;border-top:1px solid rgba(242,
     </div>
   </div>
 </div>
+
+<section id="areas">
+  <p class="sl">Where We Work</p>
+  <h2 class="st">SERVING ALL OF LONG ISLAND &amp; NYC</h2>
+  <p class="sb">Based in Dix Hills, Skyline Striping stripes parking lots and marks pavement across both Long Island counties and all five boroughs of New York City. Same crew, same standard, wherever your property sits.</p>
+  <div class="areag">
+
+    <div class="areac">
+      <h3 class="areat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Suffolk County</h3>
+      <p class="aread">Our home county. From the Town of Huntington through Brookhaven, we keep retail plazas, office parks, medical campuses, and multifamily lots striped, ADA compliant, and looking their best, often on nights and weekends so business never stops.</p>
+      <p class="areal"><b>Huntington</b> &middot; <b>Dix Hills</b> &middot; <b>Melville</b> &middot; Commack &middot; Smithtown &middot; Babylon &middot; Islip &middot; Hauppauge &middot; Ronkonkoma &middot; Patchogue &middot; Riverhead</p>
+    </div>
+
+    <div class="areac">
+      <h3 class="areat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Nassau County</h3>
+      <p class="aread">A short drive west and we are on site. Nassau's dense retail corridors and apartment communities count on us for crisp restripes, fresh line layouts on new asphalt, and full ADA marking that passes inspection the first time.</p>
+      <p class="areal"><b>Hempstead</b> &middot; <b>Garden City</b> &middot; <b>Hicksville</b> &middot; Levittown &middot; Mineola &middot; Farmingdale &middot; Westbury &middot; Freeport &middot; Massapequa &middot; Oyster Bay &middot; Long Beach</p>
+    </div>
+
+    <div class="areac">
+      <h3 class="areat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York City</h3>
+      <p class="aread">All five boroughs. Tight urban lots, parking garages, and national brand storefronts across the city rely on us for precision marking and overnight scheduling that keeps curbside spaces open through business hours.</p>
+      <p class="areal"><b>Queens</b> &middot; <b>Brooklyn</b> &middot; <b>The Bronx</b> &middot; Manhattan &middot; Staten Island</p>
+    </div>
+
+  </div>
+  <p class="areanote">Do not see your town listed? If you are on Long Island or in New York City, we cover you. <a href="#contact">Get a free quote</a> or call <a href="tel:+18457978049">(845) 797.8049</a>.</p>
+</section>
 
 <section id="faq">
   <p class="sl">Common Questions</p>
